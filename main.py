@@ -17,6 +17,10 @@ class Preprocessor:
         '3. Encoding Categorical Data',
         '4. Feature Scaling of the Dataset',
         '5. Download the modified dataset'
+        '6. Scatter plot'
+        '7. Hostogram'
+        '8. Bar Graph'
+        '9. Pie Chart'
     ]
 
     data = 0
@@ -93,7 +97,18 @@ class Preprocessor:
             # moves the control into the Download class.
             elif choice==5:
                 Download(self.data).download()
-            
+             elif choice == 6:
+                DataVisualization(self.data).scatter_plot()
+
+            elif choice == 7:
+                DataVisualization(self.data).histogram()
+
+            elif choice == 8:
+                DataVisualization(self.data).bar_graph()
+
+            elif choice == 9:
+                DataVisualization(self.data).pie_chart()
+                
             else:
                 print("\nWrong Integer value!! Try again..\U0001F974")
 
